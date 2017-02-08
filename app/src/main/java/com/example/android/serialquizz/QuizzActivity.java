@@ -94,8 +94,11 @@ public class QuizzActivity extends AppCompatActivity {
         EditText eT1 = (EditText) findViewById(R.id.eTAnswer1);
         eT1.setText(answer1);
 
-        RadioButton rb = (RadioButton) findViewById(answer2);
-        rb.setChecked(true);
+        if (answer2 == (R.id.master1) | answer2 == (R.id.master2)
+                | answer2 == (R.id.master3) | answer2 == (R.id.master4)){
+            RadioButton rb = (RadioButton) findViewById(answer2);
+            rb.setChecked(true);
+        }
 
         CheckBox cB1 = (CheckBox) findViewById(R.id.cBShredder);
         cB1.setChecked(answer31);
@@ -124,7 +127,7 @@ public class QuizzActivity extends AppCompatActivity {
         if (answer4.equalsIgnoreCase(getResources().getString(R.string.answer_4))) {
             result++;
         }
-        if (answer2 == R.id.Master4) {
+        if (answer2 == R.id.master4) {
             result++;
         }
         if (answer31) {
