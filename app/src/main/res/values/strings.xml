@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">SerialQuizz</string>
+    <string name="Title">80´s serial quiz</string>
+    <string name="answer">Answer</string>
+    <string name="bads">Check the Bad guys</string>
+    <string name="q1intro">Complete the text:</string>
+    <string name="gargamel">Gargamel</string>
+    <string name="a_team_text">In 1972, a crack commando unit was sent to prison by a military court for a crime they didn\'t commit. These men promptly escaped from a maximum security stockade to the Los Angeles underground. Today, still wanted by the government they survive as soldiers of fortune. If you have a problem, if no one else can help, and if you can find them....maybe you can hire The</string>
+    <string name="highway">Jonathan Smith</string>
+    <string name="name">Name</string>
+    <string name="play">Play</string>
+    <string name="result">Result</string>
+    <string name="shredder">Shredder</string>
+    <string name="quewtion_master_of_the_universe">Who is the MASTER OF THE UNIVERSE?</string>
+    <string name="question_4">press the button and write the name of the TV show:</string>
+    <string name="answer_1">A-Team</string>
+    <string name="answer_4">Knight Rider</string>
+    <string name="mensage_negative">Better go home please.....</string>
+    <string name="mensage_0">you know nothing Jon Snow</string>
+    <string name="mensage_low">You know very little about the 80´s series</string>
+    <string name="mensage_high">Very well, you know a lot about the 80´s series</string>
+    <string name="mensage_total">Great!!!!! you know everything about the 80´s series</string>
+    <string name="score">Score : </string>
+
 </resources>

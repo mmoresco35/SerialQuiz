@@ -4,147 +4,205 @@
     android:id="@+id/activity_quizz"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/fondopapel"
+    android:orientation="vertical"
     tools:context="com.example.android.serialquizz.QuizzActivity">
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="80´s serial quiz"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/Title"
         android:textAllCaps="true"
-        android:textSize="40dp"
-        android:textStyle="italic"
-        android:gravity="center"/>
+        android:textColor="@color/title"
+        android:textSize="@dimen/text_title"
+        android:textStyle="bold" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp">
+        android:layout_margin="@dimen/margin"
+        android:layout_weight="11">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Complete de text:"
-                android:textSize="20dp"
-                android:textStyle="italic"/>
+                android:layout_margin="@dimen/margin"
+                android:orientation="vertical">
 
-            <TextView
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q1intro"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/text_question"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/a_team_text"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/text_normal" />
+
+                <EditText
+                    android:id="@+id/eTAnswer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textCapCharacters" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="In 1972, a crack commando unit was sent to prison by a military court for a crime they didn't commit. These men promptly escaped from a maximum security stockade to the Los Angeles underground. Today, still wanted by the government they survive as soldiers of fortune. If you have a problem, if no one else can help, and if you can find them....maybe you can hire The"
-                android:textSize="20dp"
-                android:textStyle="italic"/>
+                android:layout_margin="@dimen/margin"
+                android:orientation="vertical">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Answer"
-                android:ems="10"
-                android:id="@+id/editText"
-                android:inputType="textCapCharacters" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Who is the MASTER OF THE UNIVERSE?"
-                android:textSize="20dp"
-                android:textStyle="italic"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quewtion_master_of_the_universe"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/text_question"
+                    android:textStyle="italic" />
 
 
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scrollbarAlwaysDrawHorizontalTrack="true"
-                android:scrollbarSize="10dp">
-
-                <RadioGroup
-                    android:layout_width="wrap_content"
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:scrollbarAlwaysDrawHorizontalTrack="true">
 
-                    <RadioButton
-                        android:drawableRight="@drawable/master1"
+                    <RadioGroup
+                        android:id="@+id/rGquestion2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/radioButton4"
-                        android:layout_weight="1" />
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                    <RadioButton
-                        android:drawableRight="@drawable/master2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/radioButton3"
-                        android:layout_weight="1" />
+                        <RadioButton
+                            android:id="@+id/master1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableRight="@drawable/master1" />
 
-                    <RadioButton
-                        android:drawableRight="@drawable/master3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/radioButton2"
-                        android:layout_weight="1" />
+                        <RadioButton
+                            android:id="@+id/master2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableRight="@drawable/master2" />
 
-                    <RadioButton
-                        android:drawableRight="@drawable/master4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/radioButton"
-                        android:layout_weight="1" />
-                </RadioGroup>
-            </HorizontalScrollView>
+                        <RadioButton
+                            android:id="@+id/master3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableRight="@drawable/master3" />
 
-            <TextView
+                        <RadioButton
+                            android:id="@+id/Master4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableRight="@drawable/master4" />
+                    </RadioGroup>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Check the Bad guys"
-                android:textSize="20dp"
-                android:textStyle="italic"/>
+                android:layout_margin="@dimen/margin"
+                android:orientation="vertical">
 
-            <CheckBox
-                android:text="Shredder"
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bads"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/text_question"
+                    android:textStyle="italic" />
+
+                <CheckBox
+                    android:id="@+id/cBShredder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shredder"
+                    android:textColor="@color/text" />
+
+                <CheckBox
+                    android:id="@+id/cBHighway"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/highway"
+                    android:textColor="@color/text" />
+
+                <CheckBox
+                    android:id="@+id/cBGargamel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gargamel"
+                    android:textColor="@color/text" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox1" />
+                android:layout_margin="@dimen/margin"
+                android:orientation="vertical">
 
-            <CheckBox
-                android:text="Jonathan Smith"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox2" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/question_4"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/text_question"
+                    android:textStyle="italic" />
 
-            <CheckBox
-                android:text="Gargamel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox" />
+                <Button
+                    android:id="@+id/stop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/special_layout_height"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/button"
+                    android:onClick="play"
+                    android:text="@string/play" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="press the button and write the name of the tw show"
-                android:textSize="20dp"
-                android:textStyle="italic"/>
 
-            <Button
-                android:text="Button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="play"
-                android:id="@+id/button" />
+                <EditText
+                    android:id="@+id/eTAnswer4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/name"
+                    android:inputType="textPersonName" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Name"
-                android:ems="10"
-                android:id="@+id/editText2" />
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/getResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:layout_weight="1"
+        android:background="@color/button"
+        android:onClick="getResult"
+        android:text="@string/result" />
+
 </LinearLayout>
